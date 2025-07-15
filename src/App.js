@@ -128,7 +128,7 @@ const handleSubmit = async (e) => {
       alt="RepMate Logo"
       style={{
         width: "50%",
-        maxWidth: "300px",
+        maxWidth: "150px",
         marginBottom: "1rem",
         display: "block",
         marginLeft: "auto",
