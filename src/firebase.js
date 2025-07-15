@@ -1,12 +1,13 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore"; // ✅ Add this
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage"; // ✅ this was missing
 
 const firebaseConfig = {
   apiKey: "AIzaSyAwlyxhkGTl3YxRc_vU7b-Da0rkBAyP7Yw",
   authDomain: "repmate-6f3d1.firebaseapp.com",
   projectId: "repmate-6f3d1",
-  storageBucket: "repmate-6f3d1.firebasestorage.app",
+  storageBucket: "repmate-6f3d1.appspot.com", // ✅ fix this line!
   messagingSenderId: "990195963276",
   appId: "1:990195963276:web:f76f64cb6f59c75347b2a9",
   measurementId: "G-RHZB9N5BZ4",
@@ -14,6 +15,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-const db = getFirestore(app); // ✅ Initialize Firestore
+const db = getFirestore(app);
+const storage = getStorage(app); // ✅ initialize storage
 
-export { db }; // ✅ Export Firestore instance
+export { db, storage };
