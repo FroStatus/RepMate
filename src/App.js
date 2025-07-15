@@ -1,9 +1,8 @@
 // A React signup form with dynamic lift entry using useState
 import React, { useState } from "react";
-import { db } from "./firebase";
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { db, storage } from "./firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { storage } from "./firebase";
+import { collection, addDoc, Timestamp } from "firebase/firestore";
 
 export default function SignupForm() {
   const [coachInfo, setCoachInfo] = useState({
@@ -65,15 +64,18 @@ export default function SignupForm() {
     return coachFieldsFilled && liftsFilled;
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    let uploadedFileURL = null;
-
-  if (uploadedFile) {
-    const fileRef = ref(storage, `uploadedFiles/${uploadedFile.name}`);
-    const snapshot = await uploadBytes(fileRef, uploadedFile);
-    uploadedFileURL = await getDownloadURL(snapshot.ref);
+  let uploadedFileURL = null;
+  try {
+    if (uploadedFile) {
+      const fileRef = ref(storage, `uploadedFiles/${uploadedFile.name}`);
+      const snapshot = await uploadBytes(fileRef, uploadedFile);
+      uploadedFileURL = await getDownloadURL(snapshot.ref);
+    }
+  } catch (uploadErr) {
+    console.error("Error uploading file:", uploadErr);
   }
 
   const formData = {
@@ -83,15 +85,15 @@ export default function SignupForm() {
     uploadedFileURL: uploadedFileURL || null,
     submittedAt: Timestamp.now(),
   };
-
-    try {
-      await addDoc(collection(db, "coach_submissions"), formData);
-      setFormStatus("success"); // ✅ Mark as successful
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setFormStatus("error"); // ✅ Mark as failed
-    }
-  };
+  
+  try {
+    await addDoc(collection(db, "coach_submissions"), formData);
+    setFormStatus("success");
+  } catch (error) {
+    console.error("Error submitting form:", error);
+    setFormStatus("error");
+  }
+};
 
   const inputStyle = {
     display: "block",
