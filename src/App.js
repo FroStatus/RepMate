@@ -85,7 +85,7 @@ const handleSubmit = async (e) => {
     uploadedFileURL: uploadedFileURL || null,
     submittedAt: Timestamp.now(),
   };
-  
+
   try {
     await addDoc(collection(db, "coach_submissions"), formData);
     setFormStatus("success");
@@ -122,6 +122,20 @@ const handleSubmit = async (e) => {
   }
 
   return (
+    <div style={{ padding: "1rem", maxWidth: "600px", margin: "0 auto" }}>
+    <img
+      src="/logo.png"
+      alt="RepMate Logo"
+      style={{
+        width: "100%",
+        maxWidth: "300px",
+        marginBottom: "1rem",
+        display: "block",
+        marginLeft: "auto",
+        marginRight: "auto",
+      }}
+    />
+
     <form
       onSubmit={handleSubmit}
       style={{ padding: "1rem", maxWidth: "600px", margin: "0 auto" }}
@@ -458,5 +472,6 @@ const handleSubmit = async (e) => {
         Submit
       </button>
     </form>
+    </div>
   );
 }
