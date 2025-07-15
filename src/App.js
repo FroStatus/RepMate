@@ -2,6 +2,8 @@
 import React, { useState } from "react";
 import { db } from "./firebase";
 import { collection, addDoc, Timestamp } from "firebase/firestore";
+import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import { storage } from "./firebase";
 
 export default function SignupForm() {
   const [coachInfo, setCoachInfo] = useState({
@@ -66,12 +68,21 @@ export default function SignupForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const formData = {
-      coachInfo,
-      lifts,
-      uploadedFileName: uploadedFile?.name || null,
-      submittedAt: Timestamp.now(),
-    };
+    let uploadedFileURL = null;
+
+  if (uploadedFile) {
+    const fileRef = ref(storage, `uploadedFiles/${uploadedFile.name}`);
+    const snapshot = await uploadBytes(fileRef, uploadedFile);
+    uploadedFileURL = await getDownloadURL(snapshot.ref);
+  }
+
+  const formData = {
+    coachInfo,
+    lifts,
+    uploadedFileName: uploadedFile?.name || null,
+    uploadedFileURL: uploadedFileURL || null,
+    submittedAt: Timestamp.now(),
+  };
 
     try {
       await addDoc(collection(db, "coach_submissions"), formData);
