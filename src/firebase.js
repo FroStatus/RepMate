@@ -7,7 +7,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyAwlyxhkGTl3YxRc_vU7b-Da0rkBAyP7Yw",
   authDomain: "repmate-6f3d1.firebaseapp.com",
   projectId: "repmate-6f3d1",
-  storageBucket: "repmate-6f3d1.appspot.com", // ✅ fix this line!
+  storageBucket: "repmate-6f3d1.firebasestorage.app", // ✅ fix this line!
   messagingSenderId: "990195963276",
   appId: "1:990195963276:web:f76f64cb6f59c75347b2a9",
   measurementId: "G-RHZB9N5BZ4",
