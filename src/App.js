@@ -277,7 +277,7 @@ const handleSubmit = async (e) => {
             )}
           </div>
           <div style={{ flex: "1" }}>
-            <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
+            <h3 style={{ fontWeight: "600", marginTop: "3rem", marginBottom: "1rem" }}>
               Program Frequency
             </h3>
             <select
