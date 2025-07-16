@@ -132,13 +132,13 @@ const handleSubmit = async (e) => {
       padding: "2rem 1rem",
     }}
   >
-    <div
+        <div
       style={{
         maxWidth: "600px",
         margin: "0 auto",
-        backgroundColor: "transparent",
+        backgroundColor: "#3a3a3a", // ⬅ slightly lighter than outer background
         borderRadius: "8px",
-        boxShadow: "0 0 12px rgba(15, 13, 13, 0.3)",
+        boxShadow: "0 0 12px rgba(0,0,0,0.3)",
         padding: "1rem",
       }}
     >
