@@ -157,7 +157,14 @@ const handleSubmit = async (e) => {
       />
       <form onSubmit={handleSubmit}>
       <h2
-        style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}
+        style={{
+          fontSize: "1.75rem",
+          fontWeight: "600",
+          marginBottom: "1.5rem",
+          textAlign: "center",
+          fontFamily: `"Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif`,
+          color: "#f0f0f0",
+        }}
       >
         RepMate Signup
       </h2>
