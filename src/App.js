@@ -122,24 +122,39 @@ const handleSubmit = async (e) => {
   }
 
   return (
-    <div style={{ padding: "1rem", maxWidth: "600px", margin: "0 auto" }}>
-    <img
-      src="/logo.png"
-      alt="RepMate Logo"
+  <div
+    style={{
+      minHeight: "100vh",
+      backgroundColor: "#2e2e2e",
+      backgroundImage:
+        "repeating-linear-gradient(45deg, #00000015 0px, #00000015 1px, transparent 1px, transparent 20px)",
+      backgroundSize: "40px 40px",
+      padding: "2rem 1rem",
+    }}
+  >
+    <div
       style={{
-        width: "50%",
-        maxWidth: "150px",
-        marginBottom: "1rem",
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
+        maxWidth: "600px",
+        margin: "0 auto",
+        backgroundColor: "#ffffff",
+        borderRadius: "8px",
+        boxShadow: "0 0 12px rgba(0,0,0,0.3)",
+        padding: "1rem",
       }}
-    />
-
-    <form
-      onSubmit={handleSubmit}
-      style={{ padding: "1rem", maxWidth: "600px", margin: "0 auto" }}
     >
+      <img
+        src="/logo.png"
+        alt="RepMate Logo"
+        style={{
+          width: "50%",
+          maxWidth: "150px",
+          marginBottom: "1rem",
+          display: "block",
+          marginLeft: "auto",
+          marginRight: "auto",
+        }}
+      />
+      <form onSubmit={handleSubmit}>
       <h2
         style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem" }}
       >
@@ -298,7 +313,7 @@ const handleSubmit = async (e) => {
             "Beginners",
             "Intermediate lifters",
             "Competitive athletes",
-            "Gen pop / general fitness",
+            "General population",
             "Other",
           ].map((option) => (
             <label
@@ -472,6 +487,7 @@ const handleSubmit = async (e) => {
         Submit
       </button>
     </form>
+    </div>
     </div>
   );
 }
