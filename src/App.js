@@ -241,7 +241,7 @@ const handleSubmit = async (e) => {
           backgroundColor: "#1e2d21",
         }}
       >
-        <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
+        <h3 style={{ fontWeight: "600", marginBottom: "0.25rem" }}>
           Program Style
         </h3>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
