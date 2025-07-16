@@ -241,7 +241,7 @@ const handleSubmit = async (e) => {
           backgroundColor: "#1e2d21",
         }}
       >
-        <h3 style={{ fontWeight: "600", marginBottom: "0.25rem" }}>
+        <h3 style={{ fontWeight: "600", marginBottom: "3rem" }}>
           Program Style
         </h3>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
@@ -277,8 +277,8 @@ const handleSubmit = async (e) => {
             )}
           </div>
           <div style={{ flex: "1" }}>
-            <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
-              Program Style
+            <h3 style={{ fontWeight: "600", marginBottom: "0.25rem" }}>
+              Program Frequency
             </h3>
             <select
               value={coachInfo.programFrequency}
