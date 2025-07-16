@@ -246,9 +246,6 @@ const handleSubmit = async (e) => {
         </h3>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
           <div style={{ flex: "1" }}>
-            <label style={{ fontWeight: "600", display: "block", marginBottom: "0.5rem" }}>
-              Program Style
-            </label>
             {["Push / Pull / Legs", "Upper / Lower", "Other"].map((option) => (
               <label
                 key={option}
