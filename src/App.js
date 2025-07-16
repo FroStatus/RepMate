@@ -277,7 +277,9 @@ const handleSubmit = async (e) => {
             )}
           </div>
           <div style={{ flex: "1" }}>
-            <label style={{ fontWeight: "600" }}>Program Frequency</label>
+            <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
+              Program Style
+            </h3>
             <select
               value={coachInfo.programFrequency}
               onChange={(e) =>
