@@ -314,9 +314,9 @@ const handleSubmit = async (e) => {
           </div>
         </div>
         <div style={{ marginTop: "1.5rem" }}>
-          <label style={{ fontWeight: "600", display: "block" }}>
+          <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
             Target Audience
-          </label>
+          </h3>
           {[
             "Beginners",
             "Intermediate lifters",
