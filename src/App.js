@@ -140,7 +140,7 @@ const handleSubmit = async (e) => {
         color: "#f0f0f0",
         borderRadius: "8px",
         boxShadow: "0 0 12px rgba(0,0,0,0.3)",
-        padding: "1rem",
+        padding: "1rem 1.5rem",
       }}
     >
       <img
