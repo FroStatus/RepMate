@@ -179,7 +179,7 @@ const handleSubmit = async (e) => {
       <div
         style={{
           marginBottom: "2rem",
-          padding: "1rem",
+          padding: "1rem 1.5rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
           backgroundColor: "#1c2a33",
@@ -456,7 +456,7 @@ const handleSubmit = async (e) => {
       <div
         style={{
           marginBottom: "2rem",
-          padding: "1rem",
+          padding: "1rem 1.5rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
           backgroundColor: "#2a2a2a",
