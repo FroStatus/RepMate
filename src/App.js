@@ -181,7 +181,7 @@ const handleSubmit = async (e) => {
           padding: "1rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
-          backgroundColor: "#f0f8ff",
+          backgroundColor: "#1c2a33",
         }}
       >
         <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
@@ -230,7 +230,7 @@ const handleSubmit = async (e) => {
           padding: "1rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
-          backgroundColor: "#e8f5e9",
+          backgroundColor: "#1e2d21",
         }}
       >
         <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
@@ -338,7 +338,7 @@ const handleSubmit = async (e) => {
           padding: "1rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
-          backgroundColor: "#fff8e1",
+          backgroundColor: "#2f2a1e",
         }}
       >
         <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
@@ -348,7 +348,7 @@ const handleSubmit = async (e) => {
           style={{
             marginBottom: "1rem",
             fontSize: "0.9rem",
-            backgroundColor: "#fff3cd",
+            backgroundColor: "#3a3626",
             padding: "0.75rem",
             borderRadius: "6px",
             border: "1px solid #ffeeba",
@@ -458,7 +458,7 @@ const handleSubmit = async (e) => {
           padding: "1rem",
           border: "1px solid #ccc",
           borderRadius: "6px",
-          backgroundColor: "#f3f3f3",
+          backgroundColor: "#2a2a2a",
         }}
       >
         <h3 style={{ fontWeight: "600", marginBottom: "1rem" }}>
