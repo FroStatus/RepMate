@@ -137,6 +137,7 @@ const handleSubmit = async (e) => {
         maxWidth: "600px",
         margin: "0 auto",
         backgroundColor: "#3a3a3a", // ⬅ slightly lighter than outer background
+        color: "#f0f0f0",
         borderRadius: "8px",
         boxShadow: "0 0 12px rgba(0,0,0,0.3)",
         padding: "1rem",
